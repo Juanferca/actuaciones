@@ -1,0 +1,118 @@
+
+ <mdb-tabset #staticTabs [buttonClass]="'md-tabs tabs-3'" [contentClass]="'card'"> 
+  <!--Panel 1-->
+  <mdb-tab heading="Crear actuación">
+     <div class="row">
+       <div class="col-12">
+         <br>
+         <div class="card-body">
+             <div id="table" class="table-editable"><div class="row">
+                 <div class="col-md-12 mx-auto">
+                  
+                 </div>
+               </div>
+
+      
+        <!--Card content-->
+        <div class="card-body " >
+                      <form class="text-center border border-light p-5">
+      
+                          <select class="browser-default custom-select mb-3">
+                              <option selected>Selccione tipo de actuación</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+          <div class="form-row mb-3">
+              <div class="col">
+                 
+                  <!-- First name -->
+                  <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Proyecto">
+              </div>
+              <div class="col">
+                  <!-- Last name -->
+                  <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Actuación">
+              </div>
+          </div>
+          <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Titulo">
+          <select class="browser-default custom-select mb-3">
+                  <option selected>Selccione Central</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <div class="form-row mb-3">
+                      <div class="col">
+                         
+                          <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Proyecto">
+                      </div>
+                      <div class="col">
+                          <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Actuación">
+                      </div>
+                     
+                  </div>
+                  <div class="form-row mb-3 border ">
+                  <div class="col pb-2">
+                         <label style="margin-bottom:-3px">Fecha Entrada</label>
+                          <input type="date" id="fechaentrada" class="form-control" placeholder="Fecha entrada">
+                      </div>
+                      <div class="col pb-2">
+                              <label style="margin-bottom:-3px">Fecha término</label>
+                          <input type="date" id="fechatermino" class="form-control" placeholder="Fecha Término">
+                      </div>
+                     
+                  </div>
+
+                  <div class="form-row">
+                 <div class="col"> <select class="browser-default custom-select mb-3">
+                          <option selected>Seccione Estado</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="col">
+                            <select class="browser-default custom-select">
+                                  <option selected>Seccione asignación</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col"> <select class="browser-default custom-select mb-3">
+                                         <option selected>Seccione encargado</option>
+                                         <option value="1">One</option>
+                                         <option value="2">Two</option>
+                                         <option value="3">Three</option>
+                                       </select>
+                                     </div>
+                                     <div class="col">
+                                           <select class="browser-default custom-select">
+                                                 <option selected>Seccione Brigada</option>
+                                                 <option value="1">One</option>
+                                                 <option value="2">Two</option>
+                                                 <option value="3">Three</option>
+                                               </select>
+                                             </div>
+                                             <div class="col">
+                                                <input type="text" id="valorobra" class="form-control mb-2" placeholder="Valor Obra">
+                                              </div>
+                                           </div>
+                                       
+      </form>
+      <!-- Default form register -->
+            <!-- <<p class="card-body">Some quick example text to build on the card title and make up the bulk of the card's content.</p>> -->
+            <!-- Button -->
+            <a href="#" class="btn btn-success">Guardar</a>
+            <a routerLink="/table-actuacion" class="btn btn-success">Ir a listados</a>
+        
+          </div>
+        
+        </div>
+      
+   
+
+
+  

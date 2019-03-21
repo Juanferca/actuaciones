@@ -1,0 +1,210 @@
+
+
+ 
+    
+   <mdb-tabset #staticTabs [buttonClass]="'md-tabs tabs-3'" [contentClass]="'card'"> 
+         <!--Panel 1-->
+         <mdb-tab heading="Listado actuación">
+            <div class="row">
+              <div class="col-12">
+                <br>
+                <div class="card-body">
+                    <div id="table" class="table-editable"><div class="row">
+                        <div class="col-md-12 mx-auto">
+                          <div class="md-form">
+                            <input type="text" [(ngModel)]="searchText" class="form-control" id="search" mdbInput>
+                            <label for="search">Buscar</label>
+                          </div>
+                        </div>
+                      </div> 
+                      <table mdbTable class="z-depth-1">
+                        <thead>
+                          <tr>
+                            <th *ngFor="let head of headElements; let i = index" scope="col">{{head}}
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let el of elements; let i = index">
+                            <th scope="row">{{el.id}}</th>
+                            <td class="red-text">{{el.first}}</td>
+                            <td>{{el.last}}</td>
+                            <td>{{el.handle}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table class="table table-bordered table-responsive-md table-striped text-center">
+                        <tr>
+                          <th class="text-center">Person Name</th>
+                          <th class="text-center">Age</th>
+                          <th class="text-center">Company Name</th>
+                          <th class="text-center">Country</th>
+                          <th class="text-center">City</th>
+                          <th class="text-center">Sort</th>
+                          <th width="200" class="text-center">Opciones</th>
+                        </tr>
+                    
+                        <tr *ngFor="let person of personList; let id = index"   >
+                          <td>
+                           {{person.name}}
+                          </td>
+                          <td>
+                          {{person.age}}
+                          </td>
+                          <td>
+                           {{person.companyName}}
+                          </td>
+                          <td>
+                          {{person.country}}
+                          </td>
+                          <td>
+                            {{person.city}}
+                          </td>
+                          <td>
+                            <span class="table-up">
+                              <a class="indigo-text">
+                                <mdb-icon fas icon="long-arrow-alt-up"></mdb-icon>
+                              </a>
+                            </span>
+                            <span class="table-down">
+                              <a class="indigo-text">
+                                <mdb-icon fas icon="long-arrow-alt-down"></mdb-icon>
+                              </a>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="table-option">
+                                <button type="button" mdbBtn  color="primary"  rounded="true"  size="sm" class="my-0" (click)="editar(id)" mdbWavesEffect><mdb-icon fas icon="pen"></mdb-icon></button>
+                              <button type="button" mdbBtn  color="danger" rounded="true" size="sm" class="my-0" (click)="remove(id)" mdbWavesEffect><mdb-icon fas icon="eraser"></mdb-icon></button>
+                            
+                            </span>
+                           
+                          </td>
+                         
+                        </tr>
+                        
+                      </table>
+                    </div>
+                  </div>
+               
+                <!-- Editable table -->
+                     </div>
+                    <!-- Card -->
+              </div>
+          
+          </mdb-tab>
+          <!--Panel 2-->
+          <mdb-tab heading="Crear actuación">
+            <div class="row">
+              <div class="col-12">
+                <br>
+                <!--Card-->
+   
+          <!--Card content-->
+          <div class="card-body " >
+                        <form class="text-center border border-light p-5">
+        
+                            <select class="browser-default custom-select mb-3">
+                                <option selected>Selccione tipo de actuación</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+            <div class="form-row mb-3">
+                <div class="col">
+                   
+                    <!-- First name -->
+                    <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Proyecto">
+                </div>
+                <div class="col">
+                    <!-- Last name -->
+                    <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Actuación">
+                </div>
+            </div>
+            <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Titulo">
+            <select class="browser-default custom-select mb-3">
+                    <option selected>Selccione Central</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <div class="form-row mb-3">
+                        <div class="col">
+                           
+                            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Proyecto">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Actuación">
+                        </div>
+                       
+                    </div>
+                    <div class="form-row mb-3 border ">
+                    <div class="col pb-2">
+                           <label style="margin-bottom:-3px">Fecha Entrada</label>
+                            <input type="date" id="fechaentrada" class="form-control" placeholder="Fecha entrada">
+                        </div>
+                        <div class="col pb-2">
+                                <label style="margin-bottom:-3px">Fecha término</label>
+                            <input type="date" id="fechatermino" class="form-control" placeholder="Fecha Término">
+                        </div>
+                       
+                    </div>
+  
+                    <div class="form-row">
+                   <div class="col"> <select class="browser-default custom-select mb-3">
+                            <option selected>Seccione Estado</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                              <select class="browser-default custom-select">
+                                    <option selected>Seccione asignación</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-row">
+                                  <div class="col"> <select class="browser-default custom-select mb-3">
+                                           <option selected>Seccione encargado</option>
+                                           <option value="1">One</option>
+                                           <option value="2">Two</option>
+                                           <option value="3">Three</option>
+                                         </select>
+                                       </div>
+                                       <div class="col">
+                                             <select class="browser-default custom-select">
+                                                   <option selected>Seccione Brigada</option>
+                                                   <option value="1">One</option>
+                                                   <option value="2">Two</option>
+                                                   <option value="3">Three</option>
+                                                 </select>
+                                               </div>
+                                               <div class="col">
+                                                  <input type="text" id="valorobra" class="form-control mb-4" placeholder="Valor Obra">
+                                                </div>
+                                             </div>
+                                         
+        </form>
+        <!-- Default form register -->
+              <!-- <<p class="card-body">Some quick example text to build on the card title and make up the bulk of the card's content.</p>> -->
+              <!-- Button -->
+              <a href="#" class="btn btn-success">Guardar</a>
+              
+          
+            </div>
+          
+          </div>
+          <!-- Card -->
+              </div>
+        
+          </mdb-tab>
+        </mdb-tabset>
+  
+
+
+

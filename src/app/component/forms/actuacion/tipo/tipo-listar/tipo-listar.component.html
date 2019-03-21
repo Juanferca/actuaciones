@@ -1,0 +1,55 @@
+<app-settings></app-settings>
+    
+    <mdb-card>
+       <mdb-card-body>
+        <mdb-card-title>
+          <h5>Crear estado actuación</h5>
+        </mdb-card-title>
+        
+        <mdb-card-text>  <div class="row">
+            <div class="col-12">
+              <br>
+              <div class="card-body">
+                  <table mdbTable bordered="true" class="table table-responsive-sm text-center">
+                      <tr>
+                        <th style="height:1px!important" class="text-center">Nombre</th>
+                        <th class="text-center">Comentario</th>
+              
+                        <th class="text-center">Activo</th>
+                        <th colspan="2" class="text-center">Accion</th>
+                      <!--   <th class="text-center">Opciones</th> -->
+                      </tr>
+                  
+                      <tr *ngFor="let tipo of tipos">
+
+                        <td>{{tipo.nombreTipoActuacion}}</td>
+                        <td>{{tipo.descripcionTippoActuacion}}</td>
+  
+                        <td *ngIf="tipo.activoTipoActuacion"><mdb-icon far icon="check-circle"
+                            size="1x" class="green-text pr-3"></mdb-icon>
+                        </td>
+                        <td *ngIf="!tipo.activoTipoActuacion"><mdb-icon fas icon="times"
+                            size="1x" class="red-text pr-3"></mdb-icon>
+                        </td>
+                        <td>
+                          <a>
+                              <mdb-icon class="blue-text" size="1x" fas icon="pen"></mdb-icon>
+                            </a>
+                            </td>
+                          <td>
+                              <a >
+                                <mdb-icon class="red-text" size="1x" fas icon="eraser"></mdb-icon>
+                              </a>
+                          </td>
+                            
+               
+                
+                      </tr>
+                    </table>
+                </div>
+              </div>
+           </div>
+    </mdb-card-text>
+      </mdb-card-body>
+    </mdb-card>
+  

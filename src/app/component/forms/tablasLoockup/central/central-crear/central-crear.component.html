@@ -1,0 +1,127 @@
+
+
+
+
+
+<div class="container">
+  <!--Card-->
+<mdb-card class="mt-5">
+
+    <mdb-card-header class="header blue lighten-4">
+      <div class="row d-flex justify-content-center">
+        <h3 class="white-text mb-0 py-1 font-weight-bold">CREAR CENTRAL</h3>
+      </div>
+
+    </mdb-card-header>
+
+  <!--Card content-->
+  <mdb-card-body>
+      <!--Title-->
+
+      <!--Text-->
+      <mdb-card-text>
+
+        <form [formGroup]="forma" (ngSubmit)="onSubmit()">
+          <div class="row">
+      <div class="col col-2">
+
+      </div>
+      <div class="col col-2">
+        <div class="md-form">
+          <input formControlName="codigo"
+                 mdbInput mdbValidate
+                 type="text" name="codigo"  id="form1" class="form-control">
+          <label for="form1" class="">Código</label>
+        </div>
+      </div>
+      <div class="col col-3">
+        <div class="md-form">
+          <input formControlName="nombreCentral"
+                 mdbInput mdbValidate
+                 type="text" name="nombreCentral"  id="form2" class="form-control">
+          <label for="form2" class="">Nombre Central</label>
+           <!--<mdb-success *ngIf="forma.controls['codigo'].valid ">Válido</mdb-success>-->
+        </div>
+      </div>
+      <div class="col col-3">
+        <div class="md-form">
+          <input formControlName="provincia"
+            mdbInput mdbValidate disabled
+                 type="text" name="provincia"  id="form3" class="form-control">
+          <label for="form3" class="disabled">Provincia</label>
+        </div>
+      </div>
+    </div>
+          <div class="row">
+            <div class="col col-4">
+            </div>
+            <div class="col col-2">
+              <div class="md-form">
+          <input formControlName="zona"
+                 mdbInput mdbValidate disabled
+                 type="text" name="zona"  id="form5" class="form-control">
+          <label for="form5" class="disabled">Zona</label>
+        </div>
+            </div>
+            <div class="col col-1">
+              <div class="md-form">
+          <input formControlName="distancia"
+                 mdbInput mdbValidate
+                 type="number" name="codigo"  id="form6" class="form-control">
+          <label for="form6" class="">Distancia / Km</label>
+        </div>
+            </div>
+            <div class="col col-1">
+              <div class="md-form">
+                <mdb-checkbox
+                  formControlName="activoCentral"
+                  name="activo" [checked]="true">Activo</mdb-checkbox>
+
+        </div>
+            </div>
+            <div class="col col-4">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-2">
+            </div>
+            <div class="col col-8">
+              <div class="md-form">
+                <textarea formControlName="comentarioCentral"
+                          mdbInput mdbValidate
+                          type="text" id="form4"
+                          class="md-textarea form-control" rows="1" ></textarea>
+                <mdb-success *ngIf="forma.controls['comentarioCentral'].valid ">Entrada válida</mdb-success>
+              <label for="form4">Notas a tener encuenta</label>
+      </div>
+            </div>
+            <div class="col col-2">
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col col-8">
+            </div>
+            <div class="col col-4">
+
+              <button mdbBtn type="submit" color="primary" rounded="true" outline="true" mdbWavesEffect>Guardar</button>
+              <button mdbBtn type="button" color="danger"  rounded="true"  outline="true" mdbWavesEffect>Cancel</button>
+            </div>
+
+          </div>
+
+          {{forma.valid}}
+
+  </form>
+
+      </mdb-card-text>
+
+
+  </mdb-card-body>
+  <!--/.Card content-->
+</mdb-card>
+<!--/.Card-->
+</div>
+

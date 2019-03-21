@@ -1,0 +1,70 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">Settings</a></mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+
+        <!-- Links -->
+        <ul class="navbar-nav m-auto">
+             <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          Estado<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a routerLink="/estados-crear" class="dropdown-item waves-light" mdbWavesEffect href="#">Crear estado</a>
+          <a routerLink="/estados-listar" class="dropdown-item waves-light" mdbWavesEffect href="#">Listar estados</a>
+
+        </div>
+      </li>
+  <!-- Dropdown -->
+  <li class="nav-item dropdown" dropdown>
+    <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+      Encargado<span class="caret"></span></a>
+    <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+      <a routerLink="/encargado-crear" class="dropdown-item waves-light" mdbWavesEffect href="#">Crear encargado</a>
+      <a routerLink="/encargado-listar" class="dropdown-item waves-light" mdbWavesEffect href="#">Listar encargados</a>
+  
+     
+    </div>
+  </li>
+
+             <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+         Tipo<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a routerLink="/tipo-crear" class="dropdown-item waves-light" mdbWavesEffect href="#">Crear tipo</a>
+          <a routerLink="/tipo-listar" class="dropdown-item waves-light" mdbWavesEffect href="#">Listar tipo</a>
+       
+        </div>
+      </li>
+
+</ul>
+</links>
+</mdb-navbar>
+<!-- <div>
+
+<mdb-card>
+    <mdb-card-body>
+     <mdb-card-title>
+       <h5>Seleccione opción deseada</h5>
+     </mdb-card-title>
+     
+     <mdb-card-text> 
+        
+ </mdb-card-text>
+   </mdb-card-body>
+ </mdb-card>
+                  
+</div>               -->
+         
+
+
+        
+
+  
+
+
